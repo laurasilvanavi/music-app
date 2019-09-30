@@ -13,9 +13,8 @@ export class InstrumentComponent implements OnInit {
   ngOnInit() {
   }
 
-  playSound() {
+  playNote(note: string) {
     const synth = new Tone.Synth().toMaster();
-    synth.triggerAttackRelease("C4", "8n");
+    synth.triggerAttackRelease(note, "8n");
   }
-
 }
