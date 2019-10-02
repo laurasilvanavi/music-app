@@ -19,7 +19,7 @@ import { MatButtonModule, MatCardModule, MatGridListModule } from '@angular/mate
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
