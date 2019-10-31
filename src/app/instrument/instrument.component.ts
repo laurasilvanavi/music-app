@@ -18,7 +18,7 @@ export class InstrumentComponent implements OnInit {
   ngOnInit() {
     this.volume = new Tone.Volume(-5);
     this.sampler = new Tone.Sampler({
-      G2 : '../../assets/cat-sample.mov'
+      E2 : '../../assets/dog-sample.wav'
     }).chain(this.volume, Tone.Master);
 
     this.synth = new Tone.Synth().toMaster();
