@@ -1,5 +1,64 @@
-<mat-grid-list cols="1" rowHeight="3:1">
-    <mat-grid-tile>
-        <button *ngFor="let note of notes;" mat-stroked-button color="primary" (click)="playNote(note)">♪ {{note}} </button>
-    </mat-grid-tile>
+<mat-grid-list cols="1" rowHeight="3.5:1">
+  <mat-grid-tile>
+    <button
+      *ngFor="let note of notes"
+      mat-stroked-button
+      color="primary"
+      (click)="playNote(note)"
+    >
+      ♪ {{ note }}
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="6" rowHeight="10:2">
+  <mat-grid-tile>
+    <button
+      mat-stroked-button
+      color="primary"
+      (click)="toggleMelody()"
+      [ngClass]="{ 'currently-playing': melodyPart && !melodyPart.mute }"
+    >
+      🎹 Melody
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button
+      mat-stroked-button
+      color="primary"
+      (click)="toggleBass()"
+      [ngClass]="{ 'currently-playing': bassPart && !bassPart.mute }"
+    >
+      🎸 Bass
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button
+      mat-stroked-button
+      color="primary"
+      (click)="toggleNoise()"
+      [ngClass]="{ 'currently-playing': noise && !noise.mute }"
+    >
+      💨 Noise
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button
+      mat-stroked-button
+      color="primary"
+      (click)="playRandomMarioSample()"
+    >
+      🍄 Mario
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-stroked-button color="primary" (click)="speedUpBpm()">
+      👟 Speed up
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-stroked-button color="primary" (click)="stopInstruments()">
+      ⏹ Stop
+    </button>
+  </mat-grid-tile>
 </mat-grid-list>

@@ -6,22 +6,23 @@ import { AppComponent } from './app.component';
 import { InstrumentComponent } from './instrument/instrument.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule, MatCardModule, MatGridListModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatGridListModule
+} from '@angular/material';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    InstrumentComponent
-  ],
+  declarations: [AppComponent, InstrumentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    MatGridListModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
