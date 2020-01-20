@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   melodyChords,
   bassChords,
-  catianoNotes,
+  dogianoNotes,
   marioSamples
 } from './notes.const';
 import * as Tone from 'tone';
@@ -15,7 +15,6 @@ import * as Tone from 'tone';
 export class InstrumentComponent implements OnInit {
   notes: string[];
   isTransportStarted: boolean;
-  minVolume: any;
   mediumVolume: any;
   sampler: any;
   polySynthSquare: any;
@@ -27,15 +26,14 @@ export class InstrumentComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.notes = catianoNotes;
-    this.minVolume = new Tone.Volume(-30);
+    this.notes = dogianoNotes;
     this.mediumVolume = new Tone.Volume(-15);
-    this.initializeCatianoInstrument();
+    this.initializeDogianoInstrument();
   }
 
-  private initializeCatianoInstrument() {
+  private initializeDogianoInstrument() {
     this.sampler = new Tone.Sampler({
-      G4: '../../assets/cat-sample.mov'
+      E4: '../../assets/dog-sample.wav'
     }).chain(this.mediumVolume, Tone.Master);
 
     this.polySynthSquare = new Tone.PolySynth(6, Tone.Synth, {
@@ -62,7 +60,7 @@ export class InstrumentComponent implements OnInit {
           attack: 0.01,
           release: 0.4
         }
-      }).chain(this.minVolume, Tone.Master);
+      }).chain(this.mediumVolume, Tone.Master);
 
       this.melodyPart = new Tone.Part((time, chord) => {
         this.sampler.triggerAttackRelease(chord.note, chord.duration, time);
