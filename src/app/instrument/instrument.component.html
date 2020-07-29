@@ -1,4 +1,4 @@
-<mat-grid-list cols="1" rowHeight="3:1">
+<mat-grid-list cols="1" rowHeight="20em">
     <mat-grid-tile>
         <button *ngFor="let note of notes;" mat-stroked-button color="primary" (click)="playNote(note)">♪ {{note}} </button>
     </mat-grid-tile>

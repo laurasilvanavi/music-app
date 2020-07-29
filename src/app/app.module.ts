@@ -7,11 +7,13 @@ import { InstrumentComponent } from './instrument/instrument.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule, MatCardModule, MatGridListModule } from '@angular/material';
+import { AiInstrumentComponent } from './ai-instrument/ai-instrument.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InstrumentComponent
+    InstrumentComponent,
+    AiInstrumentComponent
   ],
   imports: [
     BrowserModule,
