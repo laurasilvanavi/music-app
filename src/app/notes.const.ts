@@ -34,3 +34,41 @@ export const TWINKLE_TWINKLE = {
   ],
   totalTime: 8
 };
+
+export const RANDOM_NOTES = {
+  notes: [
+    { pitch: 80, startTime: 0, endTime: 0.1 },
+    { pitch: 80, startTime: 0.2, endTime: 0.3 },
+    { pitch: 80, startTime: 0.4, endTime: 0.5 },
+    { pitch: 80, startTime: 0.6, endTime: 0.7 },
+    { pitch: 80, startTime: 0.8, endTime: 0.9 },
+    { pitch: 80, startTime: 1, endTime: 1.1 },
+    { pitch: 80, startTime: 1.2, endTime: 1.3 }],
+  totalTime: 1.3
+};
+
+export const QUANTIZED_DRUMS = {
+  notes: [
+    { pitch: 36, quantizedStartStep: 0, quantizedEndStep: 1, isDrum: true },
+    { pitch: 38, quantizedStartStep: 0, quantizedEndStep: 1, isDrum: true },
+    { pitch: 42, quantizedStartStep: 0, quantizedEndStep: 1, isDrum: true },
+    { pitch: 46, quantizedStartStep: 0, quantizedEndStep: 1, isDrum: true },
+    { pitch: 42, quantizedStartStep: 2, quantizedEndStep: 3, isDrum: true },
+    { pitch: 42, quantizedStartStep: 3, quantizedEndStep: 4, isDrum: true },
+    { pitch: 42, quantizedStartStep: 4, quantizedEndStep: 5, isDrum: true },
+    { pitch: 50, quantizedStartStep: 4, quantizedEndStep: 5, isDrum: true },
+    { pitch: 36, quantizedStartStep: 6, quantizedEndStep: 7, isDrum: true },
+    { pitch: 38, quantizedStartStep: 6, quantizedEndStep: 7, isDrum: true },
+    { pitch: 42, quantizedStartStep: 6, quantizedEndStep: 7, isDrum: true },
+    { pitch: 45, quantizedStartStep: 6, quantizedEndStep: 7, isDrum: true },
+    { pitch: 36, quantizedStartStep: 8, quantizedEndStep: 9, isDrum: true },
+    { pitch: 42, quantizedStartStep: 8, quantizedEndStep: 9, isDrum: true },
+    { pitch: 46, quantizedStartStep: 8, quantizedEndStep: 9, isDrum: true },
+    { pitch: 42, quantizedStartStep: 10, quantizedEndStep: 11, isDrum: true },
+    { pitch: 48, quantizedStartStep: 10, quantizedEndStep: 11, isDrum: true },
+    { pitch: 50, quantizedStartStep: 10, quantizedEndStep: 11, isDrum: true },
+  ],
+  quantizationInfo: { stepsPerQuarter: 4 },
+  tempos: [{ time: 0, qpm: 120 }],
+  totalQuantizedSteps: 11
+};
