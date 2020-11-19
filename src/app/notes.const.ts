@@ -35,7 +35,7 @@ export const TWINKLE_TWINKLE = {
   totalTime: 8
 };
 
-export const RANDOM_NOTES = {
+export const ONE_NOTE_SONG = {
   notes: [
     { pitch: 80, startTime: 0, endTime: 0.1 },
     { pitch: 80, startTime: 0.2, endTime: 0.3 },

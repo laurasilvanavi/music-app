@@ -12,17 +12,16 @@ export class AiInstrumentComponent implements OnInit {
   player;
   musicRNN;
   musicVAE;
-  steps = 60; // duration
-  temperature = 1.5; // randomization
-  stepsPerQuarter = 4; // tempo
+  steps = 60;
+  temperature = 1.5;
+  stepsPerQuarter = 4;
 
   ngOnInit() {
     this.player = new mm.Player();
-    // Hosted Checkpoints: https://github.com/magenta/magenta-js/blob/master/music/checkpoints/README.md
     this.musicRNN = new mm.MusicRNN('https://storage.googleapis.com/magentadata/js/checkpoints/music_rnn/basic_rnn');
     this.musicRNN.initialize();
 
-    // this.musicVAE = new mm.MusicVAE('https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/multitrack');
+    // this.musicVAE = new mm.MusicVAE('https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/groovae_4bar');
     this.musicVAE = new mm.MusicVAE('https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_4bar_small_q2');
     this.musicVAE.initialize();
   }
